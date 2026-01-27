@@ -1,20 +1,21 @@
 {
-  "name": "repeatmono",
+  "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build --workspaces"
+    "build": "tsc",
+    "start": "ts-node src/main.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "devDependencies": {
+    "@types/express": "^5.0.6",
     "typescript": "^5.9.3"
   },
-  "workspaces":[
-    "apps/*"
-  ]
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }

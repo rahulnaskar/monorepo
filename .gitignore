@@ -1,10 +1,10 @@
 # Dependencies
-/node_modules
+node_modules/
 
 # Build artifacts
-/dist
-/build
-/out
+dist/
+build/
+out/
 /*.js # Ignore compiled JS files in the root, if applicable
 /*.js.map # Ignore sourcemap files in the root, if applicable
 
