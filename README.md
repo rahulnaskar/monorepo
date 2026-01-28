@@ -140,7 +140,8 @@ The last command, `npx tsc --init`, results in generation of the config file for
 <details>
 <summary>Changes made to the default configuration genrerated by npm</summary>
 </details>
-<details>
+
+<!--<details>-->
 <summary>Adding our first project (backend) within the monorepo</summary>
 
 #### Step 1
@@ -244,6 +245,48 @@ In the `package.json` of `root` directory add `workspaces`. To do that add the l
 
 Add script to build sub-projects from `root`.
 
+```json
+  "scripts": {
+    "build": "npm run build --workspaces"
+  }
+```
+
+Once you made the changes, run the command from the `root` folder of your repository.
+
+```bash
+> npm run build
+```
+
+If things are OK, you should see your `backend` project being compiled.
+
+
+#### Step 6
+
+**Running the `dev` server from within the `root` folder.**
+
+In addition to the `build` script within the `scripts` section of your root `package.json` file add the following line to start `backend` from the root folder.
+
+> "start-backend": "npm run start --workspaces"
+
+Therefore, your `scripts` section should now look like:
+
+```json
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "start-backend": "npm run start --workspaces"
+  }
+
+```
+
+Now run the command
+
+```bash
+> npm run start
+```
+
+You should be able to see that your `backend` server is running and yields `Hello` if you visit `http://localhost:3000`
+
+**Voila!!! We have reached a point when our first sub-project can be built and controlled from the `root` folder of the repository. It's time to setup another project, the `frontend` and push it in our `monorepo`**
 
 </details>
 
