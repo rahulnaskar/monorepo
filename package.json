@@ -5,16 +5,19 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run build --workspaces",
-    "start-backend": "npm run start --workspaces"
+    "start-backend": "npm run start --workspace=backend",
+    "start-frontend": "npm run dev --workspace=frontend",
+    "start-all": "run-p start-backend start-frontend"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "npm-run-all": "^4.1.5",
     "typescript": "^5.9.3"
   },
-  "workspaces":[
+  "workspaces": [
     "apps/*"
   ]
 }
