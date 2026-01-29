@@ -1,5 +1,11 @@
 # Monorepo for Typescript Projects
 
+### Built and tested using:
+
+> node version: v25.5.0
+
+> npm version: 11.8.0
+
 ## Why?
 
 Here's my take on it.
@@ -12,7 +18,7 @@ Here's my take on it.
 
 ## Schema
 
-The not so hypothetical schema is to be able to house important parts in a web based typescript project. A `backend`, a `frontend` and a `utils` project, which is used by both `backend` and `frontend`. The keyword here is `project`. All of the above 3 are independent projects, probably maintained and developed by different teams. To know how these can be maintained by different teams, wait till you reach `Product Management`.
+The not so hypothetical schema is to be able to house important parts in a web based typescript project. A `backend`, a `frontend` and a `utils` project, which is used by both `backend` and `frontend`. The keyword here is `project`. All of the above 3 are independent projects, probably maintained and developed by different teams. 
 
 I have tried to additionally organize the project in 2 broad sections, `apps` and `packages`, to represent the mental model of keeping `applications` within the `apps` folder and supporting packages like `utils` in the `packages` folder. Translating that to folder organization, from the root repository folder, it should look like the following once we are done setting up the project as a whole.
 
@@ -627,7 +633,7 @@ But before that, we need to ensure that `utils` project can be built from root w
       "apps/*"
     ]
    ```
-**Note the order of it. Remember we will use stuff from `packges/utils` in other projects. Hence, it needs to build first.
+**Note the order of it. Remember we will use stuff from `packges/utils` in other projects. Hence, it needs to build first.**
 
 2. Execute the command
 
