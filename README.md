@@ -281,12 +281,18 @@ Being the `backend`, it should act like a server and serve something; right? Let
 We will also be using `express`, the de-facto standard to handle http requests and responses. Let's install that first.
 
 ```bash
-> npm install -D express @types/express
+> npm install express
+> npm install -D @types/express
 ```
 
 #### Step 4
 
-**Create a file named main and serve `Hello` from default route, i. e., `/`. For the purpose, I have created a file `main.ts` containing the code below:**
+**Create a folder `src` within `apps/backend` folder. `src` is the place where we are going to keep all our source files. Run the following command from within `apps/backend` folder**
+```bash
+> mkdir src
+```
+
+**Create a file named main and serve `Hello` from default route, i. e., `/`. For the purpose, I have created a file `main.ts` within the `src` folder, containing the code below:**
 
 > main.ts
 
@@ -387,7 +393,7 @@ Therefore, your `scripts` section should now look like:
 Now run the command
 
 ```bash
-> npm run start
+> npm run start-backend
 ```
 
 You should be able to see that your `backend` server is running and yields `Hello` if you visit `http://localhost:3000`
@@ -489,6 +495,16 @@ Now, equipped with the `script` we can start both the projects by ensuing the co
 > npm run start-all
 ```
 from the `root` folder of the `monorepo`
+</details>
+
+<details open>
+<summary>
+Adding the <b>utils</b> project
+</summary>
+
+#### Step 1
+**
+
 </details>
 
 ## Cheers!!!
