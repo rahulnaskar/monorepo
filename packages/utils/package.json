@@ -1,0 +1,16 @@
+{
+  "name": "@repeatmono/utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/utils.js",
+  "types": "dist/utils.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

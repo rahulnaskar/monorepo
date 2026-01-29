@@ -16,6 +16,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "@repeatmono/utils": "file:../../packages/utils",
     "express": "^5.2.1"
   }
 }
